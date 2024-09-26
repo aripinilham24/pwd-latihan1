@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            background-color: aliceblue;
+        }
+
+        form {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            padding-top: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        td {
+            vertical-align: top;
+        }
+        table {
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <h1>biodata diri</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>Nama:</td>
+                <td colspan="2"><input type="text" name="nm" id=""></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td colspan="2"><input type="text" name="user" id=""></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td colspan="2"><input type="password" name="pass" id=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Jenis Kelamin:</td>
+                <td colspan="2"><input type="radio" name="jk" value="pria" id=""> pria</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="radio" name="jk" value="wanita" id=""> wanita</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Bahasa Pemrograman yang Dikuasai:</td>
+                <td colspan="2"><input type="checkbox" name="php" value="php" id=""> PHP</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="javascript" value="javascript" id=""> JAVASCRIPT</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="PYTHON" value="PYTHON" id=""> PYTHON</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="JAVA" value="JAVA" id=""> JAVA</td>
+            </tr>
+            <tr>
+                <td>Kota Asal:</td>
+                <td>
+                    <select name="kosal" id="kosal">
+                        <option value="JAKARTA">JAKARTA</option>
+                        <option value="BANDUNG">BANDUNG</option>
+                        <option value="BOGOR">BOGOR</option>
+                    </select>
+                </td colspan="2">
+            </tr>
+            <tr>
+                <td>Pesan dan Kesan:</td>
+                <td colspan="2"><textarea name="pesan" id="kesan" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" id=""></td>
+                <td><input type="reset" name="reset" id=""></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
