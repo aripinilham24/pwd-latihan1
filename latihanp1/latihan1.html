@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Satu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #001F3F;
+            color: #EAD8B1;
+            font-family: sans-serif;
+        }
+
+        hr {
+            border-color: #3A6D8C;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p a {
+            color: #6A9AB0;
+        }
+
+        button {
+            margin: 5px;
+            border-radius: 20px;
+            border: none;
+            background-color: #6ab06ac2;
+            height: 40px;
+            width: 80px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #EAD8B1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Belajar Pemrograman Website</h1>
+    <p>
+        Halo, hari ini saya sedang belajar <b>pemrograman berbasis <i>website</i>. Materi kali ini adalah lingkup dan
+            tujuan dan matakuliah cara kerja browser dan <a href="">web server</a>, struktur dasar HTML, Tag, dan
+            Atribut</b>.
+    </p>
+    <hr>
+    <p>
+        Selain itu, kita juga perlu menguasai bahasa pemrograman dalam membangun aplikasi berbasis website. Bahasa
+        pemrograman tersebut adalah:
+    </p>
+    <ol type="1">
+        <li>JavaScript</li>
+        <li>php</li>
+    </ol>
+    <ul>
+        <li>java</li>
+        <li>python</li>
+    </ul>
+
+
+    <form action="">
+        <label for="nama">Input nama</label> <br>
+        <input type="text" id="nama"> <br>
+
+        <label for="kelas">Input kelas</label> <br>
+        <input type="text" id="kelas"> <br>
+
+        <button type="button" onclick="tampilkanData()">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function tampilkanData() {
+            // Ambil nilai dari input
+            var nama = document.getElementById("nama").value;
+            var kelas = document.getElementById("kelas").value;
+
+            // Tampilkan nilai di elemen <p>
+            document.getElementById("output").innerHTML = "Nama: " + nama + "<br>Kelas: " + kelas;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Tabel</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(assets/images/a8b524e84cdca7bf24711fbbfe3f1532.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: auto;
+        }
+
+        table tr td:first-child {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr td {
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        th {
+            padding: 10px;
+            border: 1px solid black;
+            background-color: rgb(187, 187, 187);
+        }
+
+
+        form {
+            max-width: 500px;
+            margin: 20px;
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        .btn-group {
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            opacity: 0.9;
+        }   
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>NO</th>
+            <th>NPM</th>
+            <th>NAMA</th>
+            <th>PRODI</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td colspan="2">20233100, TIO</td>
+            <td>TEKNIK INFORMATIKA</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>20233100</td>
+            <td>ZAKI BIMO</td>
+            <td>TEKNIK NFORMATIKA</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>20233100</td>
+            <td>RYANTO</td>
+            <td>TEKNIK INFORMATIKA</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>20233100</td>
+            <td>ADITYA YUSUF</td>
+            <td>TEKNIK INFORMATIKA</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>20233100</td>
+            <td>AULIA NAUFAL</td>
+            <td>TEKNIK INFORMATIKA</td>
+        </tr>
+    </table>
+
+    <form action="">
+        <h1>Biodata Diri</h1>
+    
+        <div class="form-group">
+            <label for="nm">Nama:</label>
+            <input type="text" name="nm" id="nm">
+        </div>
+    
+        <div class="form-group">
+            <label for="user">Username:</label>
+            <input type="text" name="user" id="user">
+        </div>
+    
+        <div class="form-group">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+        </div>
+    
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="jk" value="pria"> Pria</label>
+                <label><input type="radio" name="jk" value="wanita"> Wanita</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label>Bahasa Pemrograman yang Dikuasai:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="php" value="php"> PHP</label>
+                <label><input type="checkbox" name="java" value="java"> JAVA</label>
+                <label><input type="checkbox" name="python" value="python"> PYTHON</label>
+                <label><input type="checkbox" name="c++" value="c++"> C++</label>
+                <label><input type="checkbox" name="javascript" value="javascript"> JAVASCRIPT</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label for="kosal">Kota Asal:</label>
+            <select name="kosal" id="kosal">
+                <option value="JAKARTA">JAKARTA</option>
+                <option value="BANDUNG">BANDUNG</option>
+                <option value="BOGOR">BOGOR</option>
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="kesan">Pesan dan Kesan:</label>
+            <textarea name="pesan" id="kesan" cols="30" rows="5"></textarea>
+        </div>
+    
+        <div class="btn-group">
+            <input type="submit" value="Simpan Data">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    
+
+</body>
+
+</html>

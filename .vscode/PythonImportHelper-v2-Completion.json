@@ -1,0 +1,83 @@
+[
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Tictactoe",
+        "kind": 6,
+        "importPath": "tes.Tic-Tac-Toe.main",
+        "description": "tes.Tic-Tac-Toe.main",
+        "peekOfCode": "class Tictactoe: #tictactoe class\n    #generate 3x3 grid, decide who plays as X, declare the winner currently as a tie\n    grid = [[\" \", \" \", \" \"], [\" \", \" \", \" \"], [\" \", \" \", \" \"]]\n    grid_simul = copy.deepcopy(grid)\n    moves_temp = random.sample([\"X\", \"O\"], 2)\n    computer = moves_temp[0]\n    player = moves_temp[1]\n    winner = \"t\" # t = tie, p = player, e = enemy\n    def __init__(self, health): #init\n        self.anger = 100-health",
+        "detail": "tes.Tic-Tac-Toe.main",
+        "documentation": {}
+    },
+    {
+        "label": "ehealth",
+        "kind": 5,
+        "importPath": "tes.Tic-Tac-Toe.main",
+        "description": "tes.Tic-Tac-Toe.main",
+        "peekOfCode": "ehealth = 100 #enemy health\nphealth = 100 #player health\nclass Tictactoe: #tictactoe class\n    #generate 3x3 grid, decide who plays as X, declare the winner currently as a tie\n    grid = [[\" \", \" \", \" \"], [\" \", \" \", \" \"], [\" \", \" \", \" \"]]\n    grid_simul = copy.deepcopy(grid)\n    moves_temp = random.sample([\"X\", \"O\"], 2)\n    computer = moves_temp[0]\n    player = moves_temp[1]\n    winner = \"t\" # t = tie, p = player, e = enemy",
+        "detail": "tes.Tic-Tac-Toe.main",
+        "documentation": {}
+    },
+    {
+        "label": "phealth",
+        "kind": 5,
+        "importPath": "tes.Tic-Tac-Toe.main",
+        "description": "tes.Tic-Tac-Toe.main",
+        "peekOfCode": "phealth = 100 #player health\nclass Tictactoe: #tictactoe class\n    #generate 3x3 grid, decide who plays as X, declare the winner currently as a tie\n    grid = [[\" \", \" \", \" \"], [\" \", \" \", \" \"], [\" \", \" \", \" \"]]\n    grid_simul = copy.deepcopy(grid)\n    moves_temp = random.sample([\"X\", \"O\"], 2)\n    computer = moves_temp[0]\n    player = moves_temp[1]\n    winner = \"t\" # t = tie, p = player, e = enemy\n    def __init__(self, health): #init",
+        "detail": "tes.Tic-Tac-Toe.main",
+        "documentation": {}
+    },
+    {
+        "label": "tictactoe",
+        "kind": 5,
+        "importPath": "tes.Tic-Tac-Toe.main",
+        "description": "tes.Tic-Tac-Toe.main",
+        "peekOfCode": "tictactoe = Tictactoe(ehealth)\n#intro\nprint(\"Welcome, stranger, to the marvelous game of Tic Tac Toe.\\n\")\ntime.sleep(2)\nprint(\"This program uses artifical intellegence (specifically, the MiniMax algorithm) to come up with the best possible move. It is unbeatable.\\n\")\ntime.sleep(3)\nprint(\"Would you like to try the ai or would you like to begin the game?\")\ntime.sleep(1.5)\npchoice = input(\"Input \\\"y\\\" if you wish to challenge the unbeatable ai, or input anything else to play the game: \")\n#unbeatable ai",
+        "detail": "tes.Tic-Tac-Toe.main",
+        "documentation": {}
+    },
+    {
+        "label": "pchoice",
+        "kind": 5,
+        "importPath": "tes.Tic-Tac-Toe.main",
+        "description": "tes.Tic-Tac-Toe.main",
+        "peekOfCode": "pchoice = input(\"Input \\\"y\\\" if you wish to challenge the unbeatable ai, or input anything else to play the game: \")\n#unbeatable ai\nif pchoice.lower() == \"y\":\n    print(\"\\nYou have chosen to challenge the unbeatable ai. Have fun!\\n\")\n    tictactoe.anger = 100\n    tictactoe.play()\n    if tictactoe.winner == \"p\": #impossible, player wins\n        print(\"You won? Please let me know of this, this is supposed to be unbeatable...\")\n    elif tictactoe.winner == \"e\": #computer wins\n        print(\"You have lost.\")",
+        "detail": "tes.Tic-Tac-Toe.main",
+        "documentation": {}
+    }
+]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="icon" href="assets1/images/">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #ECDFCC;
+
+        }
+
+        header {
+            background-color: #1E201E;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ECDFCC;
+            max-height: 60px;
+            padding: 20px 0;
+        }
+
+
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo>a>img {
+            width: 6em;
+        }
+
+        .logo a p {
+            font-size: 20px;
+        }
+
+        a {
+            color: #ECDFCC;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .cart a {
+            font-size: small;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            padding: 0 10px;
+        }
+
+        ul li {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+
+        }
+
+        #home .pic-coffee {
+            width: 30em;
+        }
+
+        #home .home-text h1 {
+            font-size: 60px;
+            max-width: 10em;
+
+        }
+
+        #home .home-text p {
+            font-weight: bold;
+        }
+
+        #home button {
+            background-color: #FF6600;
+            color: #ECDFCC;
+            border: transparent;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">
+                    <img src="assets1/images/logo.png" alt="logo">
+                    <p>MoonCoffee</p>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#coffee">Coffee</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+            <div class="cart"><a href="">Cart <span>0</span></a></div>
+        </nav>
+    </header>
+    <main>
+        <div id="home">
+            <div class="home-text">
+                <h1>Good Coffee Will Always Find The Audience</h1>
+                <p>We provide a variety of unique and best coffees</p>
+                <button>Order Now</button>
+            </div>
+            <div class="pic-coffee">
+                <img src="assets1/images/secangkir kopi.png" alt="coffee">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
