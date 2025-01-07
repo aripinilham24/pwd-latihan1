@@ -35,13 +35,16 @@
 
                             ?>
                             <tr>
-                                <td><?php echo $no++;?></td>
-                                <td><?php echo $data['namaPelanggan'];?></td>
-                                <td><?php echo $data['hpPelanggan'];?></td>
-                                <td><?php echo $data['alamatPelanggan'];?></td>
+                                <td><?php echo $no++; ?></td>
+                                <td><?php echo $data['namaPelanggan']; ?></td>
+                                <td><?php echo $data['hpPelanggan']; ?></td>
+                                <td><?php echo $data['alamatPelanggan']; ?></td>
                                 <td>
-                                    <a href="editPelanggan.php" id="<?php echo $data['idPelanggan'];?>" class="btn btn-outline-warning">Edit</a>
-                                    <a href="hapusPelanggan.php" id="<?php echo $data['idPelanggan'];?>" class="btn btn-outline-danger">Hapus</a>
+                                    <a href="editPelanggan.php?id=<?php echo $data['idPelanggan']; ?>"
+                                        id="<?php echo $data['idPelanggan']; ?>" class="btn btn-outline-warning">Edit</a>
+                                    <a onclick="confirmHapus()"
+                                        href="hapusPelanggan.php?id=<?php echo $data['idPelanggan']; ?>"
+                                        id="<?php echo $data['idPelanggan']; ?>" class="btn btn-outline-danger">Hapus</a>
                                 </td>
                             </tr>
                             <?php
@@ -52,6 +55,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function confirmHapus() {
+            const confir = confirm('Apakah yakin ingin menghapus data ini?');
+            if(!confir) {
+                event.preventDefault();
+            }
+            return confir;
+        }
+    </script>
 </body>
 
 </html>

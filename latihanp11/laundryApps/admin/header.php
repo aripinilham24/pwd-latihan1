@@ -8,6 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,17 +39,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex justify-content-end w-100">
                     <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door"></i>
-                    Home</a>
+                            Home</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="pelanggan.php"><i class="bi bi-person"></i>
-                    Customer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-credit-card"></i>
-                    Transaction</a>
+                            Customer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transaksi.php"><i class="bi bi-credit-card"></i>
+                            Transaction</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gear"></i>
-                    Setting Price</a></li>
+                    <li class="nav-item"><a class="nav-link" href="harga.php"><i class="bi bi-gear"></i>
+                            Setting Price</a></li>
                     <li class="nav-item"><a class="nav-link" href="logout.php"><i class="bi bi-box-arrow-right"></i>
-                    Logout</a></li>
+                            Logout</a></li>
                 </ul>
             </div>
         </div>

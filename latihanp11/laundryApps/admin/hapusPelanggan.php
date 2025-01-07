@@ -7,7 +7,7 @@ include '../koneksi.php';
 $id = $_GET['id'];
 
 // menghapus pelanggan
-mysqli_query($conn,"delete from pelanggan where idPelanggan='$id'");
+mysqli_query($conn,"DELETE FROM pelanggan WHERE idPelanggan='$id'");
 
 // alihkan halaman ke halaman pelanggan
 header("location:pelanggan.php");
