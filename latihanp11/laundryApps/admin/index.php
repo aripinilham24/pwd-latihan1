@@ -24,7 +24,23 @@
     </style>
 </head>
 <body>
-<?php include 'header.php'; ?>
+<?php 
+include 'header.php'; 
+include '../koneksi.php';
+$result = mysqli_query( $conn, "SELECT COUNT(*) AS total FROM pelanggan");
+$data = mysqli_fetch_assoc($result);
+$total_pelanggan = $data['total'];
+$query_transaksi = mysqli_query( $conn, "SELECT COUNT(*) AS total FROM transaksi");
+$data = mysqli_fetch_assoc($query_transaksi);
+$total_transaksi = $data['total'];
+$query_laporan = mysqli_query($conn, "
+    SELECT COUNT(*) AS total 
+    FROM transaksi 
+    JOIN pelanggan ON transaksi.transaksi_pelanggan = pelanggan.idPelanggan
+");
+$data = mysqli_fetch_assoc($query_laporan);
+$total_laporan = $data['total'];
+?>
     
     
 
@@ -34,20 +50,29 @@
         <h1>Hi, <?php echo $_SESSION['username'];?> </h1>
         <div class="row">
             <div class="col-md-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-primary">
                     <div class="card-body">
-                        <h5 class="card-title">Users</h5>
-                        <p class="card-text">Manage user accounts.</p>
-                        <a href="#" class="btn btn-primary">View Users</a>
+                        <h5 class="card-title">Customers</h5>
+                        <p class="card-text">Total <span class="text-primary"><?php echo $total_pelanggan;?></span> registered customers</p>
+                        <a href="pelanggan.php" class="btn btn-primary">View Customers</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Transaction</h5>
+                        <p class="card-text">Total <span class="text-primary"><?php echo $total_transaksi;?></span> transaction.</p>
+                        <a href="transaksi.php" class="btn btn-warning">View Transaction</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-success">
                     <div class="card-body">
                         <h5 class="card-title">Reports</h5>
-                        <p class="card-text">View system reports.</p>
-                        <a href="#" class="btn btn-primary">View Reports</a>
+                        <p class="card-text">View <span class="text-primary"><?php echo $total_laporan;?></span> system reports.</p>
+                        <a href="laporan.php" class="btn btn-success">View Reports</a>
                     </div>
                 </div>
             </div>

@@ -61,8 +61,8 @@
                                 $pakaian = mysqli_query($conn, "SELECT * FROM pakaian WHERE pakaian_transaksi='$id_transaksi'");
                                 while ($p = mysqli_fetch_array($pakaian)) { ?>
                                     <tr>
-                                        <td><input type="text" class="form-control" name="jenis_pakaian[]" value="<?php echo $p['pakaian_jenis']; ?>"></td>
-                                        <td><input type="number" class="form-control" name="jumlah_pakaian[]" value="<?php echo $p['pakaian_jumlah']; ?>"></td>
+                                        <td><input type="text" class="form-control" name="jenis_pakaian[]" value="<?php echo $p['jenis_pakaian']; ?>"></td>
+                                        <td><input type="number" class="form-control" name="jumlah_pakaian[]" value="<?php echo $p['jumlah_pakaian']; ?>"></td>
                                     </tr>
                                 <?php } ?>
                                 <!-- Tambahkan input kosong untuk jenis pakaian baru -->

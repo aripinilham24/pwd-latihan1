@@ -29,7 +29,7 @@ $jumlah_pakaian = $_POST['jumlah_pakaian'];
 // input data cucian berdasarkan id transaksi (invoice) ke table pakaian
 for($x=0;$x<count($jenis_pakaian);$x++){
 	if($jenis_pakaian[$x] != ""){
-		mysqli_query($conn,"insert into pakaian values('','$id_terakhir','$jenis_pakaian[$x]','$jumlah_pakaian[$x]')");
+		mysqli_query($conn,"insert into pakaian values('','$jenis_pakaian[$x]','$jumlah_pakaian[$x]','$id_terakhir')");
 
 	}
 }

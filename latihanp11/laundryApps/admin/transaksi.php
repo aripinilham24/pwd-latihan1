@@ -17,14 +17,14 @@
                 <thead>
                     <tr>
                         <th style="width:1%;">No</th>
-                        <th>Invoice</th>
-                        <th>Tanggal</th>
+                        <th style="width: 10%">Invoice</th>
+                        <th style="width: 10%">Tanggal</th>
                         <th>Pelanggan</th>
                         <th>Berat (Kg)</th>
                         <th>Tgl. Selesai</th>
                         <th>Harga</th>
                         <th>Status</th>				
-                        <th style="width:20%;">OPSI</th>
+                        <th style="width:25%;">OPSI</th>
                     </tr>
                 </thead>
                 <tbody>

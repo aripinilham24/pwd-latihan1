@@ -15,9 +15,9 @@
                             <form action="harga_update.php" method="post">
                                 <div class="form-group">
                                     <label for="harga">Harga per Kilo</label>
-                                    <input type="number" class="form-control" name="harga" id="harga" value="<?php echo $d['harga_perkilo']; ?>" required>
+                                    <input type="number" min="10000" class="form-control" name="harga" id="harga" value="<?php echo $d['harga_perkilo']; ?>" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3 w-100">Ubah Harga</button>
+                                <button type="submit" onclick="alert('Harga Telah Diubah!')" class="btn btn-primary mt-3 w-100">Ubah Harga</button>
                             </form>
                         <?php }
                     } else {
@@ -29,4 +29,3 @@
         </div>
     </div>
 </div>
-<?php include "footer.php"; ?>

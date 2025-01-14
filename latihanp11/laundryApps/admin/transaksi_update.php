@@ -6,7 +6,6 @@ $id = $_POST['id'];
 $pelanggan = $_POST['pelanggan'];
 $berat = $_POST['berat'];
 $tgl_selesai = $_POST['tgl_selesai'];
-
 $status = $_POST['status'];
 
 // mengambil data harga per kilo dari database
@@ -29,7 +28,7 @@ mysqli_query($conn,"delete from pakaian where pakaian_transaksi='$id'");
 // input ulang data cucian berdasarkan id transaksi (invoice) ke table pakaian
 for($x=0;$x<count($jenis_pakaian);$x++){
 	if($jenis_pakaian[$x] != ""){
-		mysqli_query($conn,"insert into pakaian values('','$id','$jenis_pakaian[$x]','$jumlah_pakaian[$x]')");
+		mysqli_query($conn,"INSERT INTO pakaian (jenis_pakaian,jumlah_pakaian, pakaian_transaksi) VALUES('$jenis_pakaian[$x]','$jumlah_pakaian[$x]','$id')");
 	}
 }
 header("location:transaksi.php");
