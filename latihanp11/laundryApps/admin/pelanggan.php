@@ -15,8 +15,8 @@
                 <h5 class="display-5">Data Pelanggan</h5>
             </div>
             <div class="card-body">
-                <a href="tambahPelanggan.php" class="btn btn-outline-primary btn-sm">Tambah Data</a>
-                <table class="table table-hover" id="table-datatable">
+                <a href="tambahPelanggan.php" class="btn btn-outline-primary btn-sm mb-3">Tambah Data</a>
+                <table class="table table-bordered table-hover table-striped" id="table-datatable">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -57,6 +57,7 @@
     </div>
 
     <script>
+        
         function confirmHapus() {
             const confir = confirm('Apakah yakin ingin menghapus data ini?');
             if(!confir) {
